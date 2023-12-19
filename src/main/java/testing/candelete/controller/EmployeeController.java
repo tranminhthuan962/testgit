@@ -7,4 +7,5 @@ public class EmployeeController {
     String name;
     String lastname;
     String middlename;
+    String fullname;
 }
