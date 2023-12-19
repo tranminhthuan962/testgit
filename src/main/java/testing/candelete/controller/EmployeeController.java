@@ -8,4 +8,5 @@ public class EmployeeController {
     String lastname;
     String middlename;
     String fullname;
+    String age;
 }
