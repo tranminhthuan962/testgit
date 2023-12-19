@@ -15,6 +15,7 @@ public class StudentController {
     //List for student
     private static List<Student> students = new ArrayList<>();
 
+    //Create static data
     static {
         students.add(new Student("Thuan", "thuangmail"));
         students.add(new Student("Vi", "Vigmail"));
