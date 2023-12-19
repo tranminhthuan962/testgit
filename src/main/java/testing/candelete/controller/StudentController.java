@@ -12,6 +12,7 @@ import java.util.List;
 
 @Controller
 public class StudentController {
+    //List for student
     private static List<Student> students = new ArrayList<>();
 
     static {
