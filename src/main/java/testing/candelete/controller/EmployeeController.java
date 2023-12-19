@@ -6,4 +6,5 @@ import org.springframework.stereotype.Controller;
 public class EmployeeController {
     String name;
     String lastname;
+    String middlename;
 }
