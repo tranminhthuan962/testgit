@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+</head>
+<body>
+<!--
+ th:action -> focus on Controller
+ th:object -> focus on Attribute
+ -->
+<h1>Create Student</h1>
+<form th:action="@{/addStudent}" th:object="${newStudent}" method="POST">
+    Name:
+    <input type="text" th:field="*{name}" />
+    <br />
+    email:
+    <input type="text" th:field="*{email}" />
+    <br />
+    <input type="submit" value="Create" />
+</form>
+
+<br>
+<a th:href="@{/index}">Home page</a>
+<a th:href="@{/studentList}">Student List</a>
+</body>
+</html>
