@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="testing.candelete.mapper.LanguageMapper">
+    <select id="findAll" resultType="testing.candelete.model.Language">
+        SELECT * FROM sakila.language;
+    </select>
+    <!--    <insert id="insert" parameterType="testing.candelete.model.Language" >-->
+    <!--        INSERT INTO sakila.language (NAME)-->
+    <!--        VALUES (#{name});-->
+    <!--    </insert>-->
+
+    <!--    <delete id="deleteById" parameterType="int">-->
+    <!--        DELETE from sakila.language WHERE language_id = #{language_id};-->
+    <!--    </delete>-->
+
+    <!--    <select id="selectById" parameterType="int" resultType="testing.candelete.model.Language">-->
+    <!--        SELECT * FROM sakila.language WHERE language_id = #{language_id};-->
+    <!--    </select>-->
+
+    <!--    <resultMap id = "result" type = "testing.candelete.model.Language">-->
+    <!--        <result property = "language_id" column = "language_id"/>-->
+    <!--        <result property = "name" column = "name"/>-->
+    <!--        <result property = "last_update" column = "last_update"/>-->
+
+    <!--    </resultMap>-->
+</mapper>

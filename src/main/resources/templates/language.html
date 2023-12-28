@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Language</title>
+</head>
+<body>
+<table>
+    <tr border = 1>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Last_update</th>
+    </tr>
+    <tr th:each="item : ${langList}">
+        <td th:utext="${item.langId}"></td>
+        <td th:utext="${item.langName}"></td>
+        <td th:utext="${item.lastUpdate}"></td>
+    </tr>
+</table>
+</body>
+</html>

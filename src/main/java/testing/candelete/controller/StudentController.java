@@ -13,7 +13,7 @@ import java.util.List;
 @Controller
 public class StudentController {
     //List for student
-    private static List<Student> students = new ArrayList<>();
+    private static final List<Student> students = new ArrayList<>();
 
     //Create static data
     static {
@@ -33,7 +33,7 @@ public class StudentController {
     }
 
     @RequestMapping(value = {"/addStudent"}, method = RequestMethod.GET)
-    public String showAddStudent(Model model){
+    public String showAddStudent(Model model) {
         Student newStudent = new Student();
         model.addAttribute("newStudent2", newStudent);
         return "addStudent";

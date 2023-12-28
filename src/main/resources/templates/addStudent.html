@@ -12,12 +12,12 @@
 <h1>Create Student</h1>
 <form th:action="@{/addStudent}" th:object="${newStudent}" method="POST">
     Name:
-    <input type="text" th:field="*{name}" />
-    <br />
+    <input type="text" th:field="*{name}"/>
+    <br/>
     email:
-    <input type="text" th:field="*{email}" />
-    <br />
-    <input type="submit" value="Create" />
+    <input type="text" th:field="*{email}"/>
+    <br/>
+    <input type="submit" value="Create"/>
 </form>
 
 <br>
