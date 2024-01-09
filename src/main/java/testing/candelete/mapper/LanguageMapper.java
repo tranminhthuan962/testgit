@@ -1,9 +1,6 @@
 package testing.candelete.mapper;
 
-import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.SelectKey;
 import testing.candelete.model.Language;
 
 import java.util.List;
@@ -22,6 +19,5 @@ public interface LanguageMapper {
 //    int deleteById(Language language);
 //
     List<Language> findAll();
-//
-//    List<Language> selectById(int id);
+    List<Language> selectByName(String name);
 }

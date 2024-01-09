@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Add Student</title>
@@ -11,11 +11,15 @@
  -->
 <h1>Create Student</h1>
 <form th:action="@{/addStudent}" th:object="${newStudent}" method="POST">
-    Name:
-    <input type="text" th:field="*{name}"/>
+    <label>
+        Name:
+        <input type="text" th:field="*{name}"/>
+    </label>
     <br/>
-    email:
-    <input type="text" th:field="*{email}"/>
+    <label>
+        email:
+        <input type="text" th:field="*{email}"/>
+    </label>
     <br/>
     <input type="submit" value="Create"/>
 </form>

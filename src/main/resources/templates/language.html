@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <title>Language</title>
 </head>
 <body>
 <table>
     <tr border = 1>
-
         <th>Id</th>
         <th>Name</th>
         <th>Last_update</th>
@@ -16,6 +15,17 @@
         <td th:utext="${item.langName}"></td>
         <td th:utext="${item.lastUpdate}"></td>
     </tr>
-</table>
+</table><br>
+<!--
+<h1>Create Student</h1>
+<form th:action="@{/addStudent}" th:object="${newStudent}" method="POST">
+    <label>
+        Search name:
+        <input type="search" th:field="*{name}"/>
+    </label>
+    <br/>
+    <input type="submit" value="Create"/>
+</form>
+-->
 </body>
 </html>

@@ -5,6 +5,9 @@
     <select id="findAll" resultType="testing.candelete.model.Language">
         SELECT * FROM sakila.language;
     </select>
+    <select id="selectByName" resultType="testing.candelete.model.Language">
+        SELECT * FROM sakila.language WHERE name = #{name};
+    </select>
     <!--    <insert id="insert" parameterType="testing.candelete.model.Language" >-->
     <!--        INSERT INTO sakila.language (NAME)-->
     <!--        VALUES (#{name});-->
@@ -13,10 +16,6 @@
     <!--    <delete id="deleteById" parameterType="int">-->
     <!--        DELETE from sakila.language WHERE language_id = #{language_id};-->
     <!--    </delete>-->
-
-    <!--    <select id="selectById" parameterType="int" resultType="testing.candelete.model.Language">-->
-    <!--        SELECT * FROM sakila.language WHERE language_id = #{language_id};-->
-    <!--    </select>-->
 
     <!--    <resultMap id = "result" type = "testing.candelete.model.Language">-->
     <!--        <result property = "language_id" column = "language_id"/>-->
