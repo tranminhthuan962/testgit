@@ -4,28 +4,25 @@
     <title>Language</title>
 </head>
 <body>
+<form th:action="@{/search/langName}" th:object="">
+    <label>
+        <input type="text" placeholder="input language">
+    </label>
+    <input type="submit" value="Search">
+</form>
 <table>
-    <tr border = 1>
+    <tr border=1>
         <th>Id</th>
-        <th>Name</th>
-        <th>Last_update</th>
+        <th>Language Name</th>
+        <th>Last update</th>
     </tr>
-    <tr th:each="item : ${langList}">
+    <tr th:each="item : ${langList}" th:object="${/langName}">
         <td th:utext="${item.langId}"></td>
         <td th:utext="${item.langName}"></td>
         <td th:utext="${item.lastUpdate}"></td>
     </tr>
-</table><br>
-<!--
-<h1>Create Student</h1>
-<form th:action="@{/addStudent}" th:object="${newStudent}" method="POST">
-    <label>
-        Search name:
-        <input type="search" th:field="*{name}"/>
-    </label>
-    <br/>
-    <input type="submit" value="Create"/>
-</form>
--->
+</table>
+<br>
+
 </body>
 </html>

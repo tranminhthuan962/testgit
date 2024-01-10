@@ -6,7 +6,7 @@
         SELECT * FROM sakila.language;
     </select>
     <select id="selectByName" resultType="testing.candelete.model.Language">
-        SELECT * FROM sakila.language WHERE name = #{name};
+        SELECT * FROM sakila.language WHERE name = #{langName};
     </select>
     <!--    <insert id="insert" parameterType="testing.candelete.model.Language" >-->
     <!--        INSERT INTO sakila.language (NAME)-->

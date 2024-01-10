@@ -15,4 +15,5 @@ public class Language {
         this.langName = langName;
         this.lastUpdate = lastUpdate;
     }
+
 }

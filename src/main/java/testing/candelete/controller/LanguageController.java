@@ -2,8 +2,10 @@ package testing.candelete.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import testing.candelete.model.Language;
 import testing.candelete.service.LanguageService;
 
 @Controller
@@ -21,9 +23,9 @@ public class LanguageController {
         return "language"; // html
     }
 
-//    @RequestMapping(value = {"/search/${langName}"}, method = RequestMethod.GET)
-//    public String searchName(@ModelAttribute("langName") Language language) {
-//        languageService.selectLangName("langName");
-//        return "language"; // html
-//    }
+    @RequestMapping(value = {"/search/langName"}, method = RequestMethod.GET)
+    public String searchName(@ModelAttribute("langName") String langName) {
+        languageService.selectLangName(langName);
+        return "language"; // html
+    }
 }

@@ -21,8 +21,8 @@ public class LanguageServiceImpl implements LanguageService {
         return languageMapper.findAll();
     }
 
-    @Override
-    public List<Language> selectLangName(String name) {
-        return languageMapper.selectByName(name);
+    public List<Language> selectLangName(String langName) {
+        return languageMapper.selectByName(langName);
     }
+
 }
