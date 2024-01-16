@@ -1,4 +1,4 @@
-package testing.candelete.mapper;
+package testing.candelete.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,10 +12,8 @@ import java.util.List;
 
 @Controller
 public class StudentController {
-    //List for student
     private static final List<Student> students = new ArrayList<>();
 
-    //Create static data
     static {
         students.add(new Student("Thuan", "thuangmail"));
         students.add(new Student("Vi", "Vigmail"));
@@ -29,14 +27,14 @@ public class StudentController {
     @RequestMapping(value = {"/studentList"}, method = RequestMethod.GET)
     public String studentList(Model model) {
         model.addAttribute("studentList", students);
-        return "studentListaa";
+        return "studentlist";
     }
 
     @RequestMapping(value = {"/addStudent"}, method = RequestMethod.GET)
     public String showAddStudent(Model model) {
         Student newStudent = new Student();
-        model.addAttribute("newStudent2", newStudent);
-        return "addStudent";
+        model.addAttribute("newStudent", newStudent);
+        return "addstudent";
     }
 
     @RequestMapping(value = {"/addStudent"}, method = RequestMethod.POST)
@@ -46,6 +44,6 @@ public class StudentController {
 
         Student newStudent = new Student(name, email);
         students.add(newStudent);
-        return "addStudent";
+        return "addstudent";
     }
 }

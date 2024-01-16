@@ -19,5 +19,5 @@ public interface LanguageMapper {
 //    int deleteById(Language language);
 //
     List<Language> findAll();
-    List<Language> selectByName(String name);
+    List<Language> selectByName(String langName);
 }
